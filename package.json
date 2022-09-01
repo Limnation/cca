@@ -9,12 +9,17 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-native": "0.69.5",
     "react-native-paper": "^5.0.0-rc.4",
+<<<<<<< HEAD
     "react-native-video": "^5.2.0"
+=======
+    "react-photo-album": "^1.16.1"
+>>>>>>> 10d76e051a7b965e60294af6944779a77bcb960e
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
