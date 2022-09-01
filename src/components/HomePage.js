@@ -1,21 +1,17 @@
 
-import { StyleSheet, View} from 'react-native';
-import { Text, Card, Title, Paragraph } from 'react-native-paper';
+import { StyleSheet, View, Image } from 'react-native';
 
 const HomePage = () => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.header}>
-                CCA
-            </Text>
-            <Text style={styles.welcome}>Welcome to Atlanta</Text>
-        </View>
+      <View style={styles.container}>
+        <Image style={styles.header} source={require('../../assets/ccaLogo.png')} />
+        <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} />
+      </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        // top: 50,
         flex: 1,
         backgroundColor: '#023047',
         alignItems: 'center',
@@ -23,13 +19,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#023047',
     },
     header: {
-        fontSize: 50,
-        color: 'white',
-
+      width: 325,
+      height: 195,
     },
     welcome: {
-        color: 'white',
-        fontSize: 20,
+      width: 315,
+      height: 50,
     }
 });
 
