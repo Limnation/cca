@@ -3,32 +3,32 @@ import PhotoAlbum from "react-photo-album";
 
 const photos = [
     {
-        src: "/photos/img1.jpg",
+        src: "../../assets/photos/img1.png",
         width: 800,
         height: 600
     },
     {
-        src: "/photos/img2.jpg",
+        src: "../../assets/photos/img2.png",
         width: 1600,
         height: 900
     },
     {
-        src: "/photos/img3.jpg",
+        src: "../../assets/photos/img3.png",
         width: 1600,
         height: 900
     },
     {
-        src: "/photos/img4.jpg",
+        src: "../../assets/photos/img4.png",
         width: 1600,
         height: 900
     },
     {
-        src: "/photos/img5.jpg",
+        src: "../../assets/photos/img5.png",
         width: 1600,
         height: 900
     },
     {
-        src: "/photos/img6.jpg",
+        src: "../../assets/photos/img6.png",
         width: 1600,
         height: 900
     }
