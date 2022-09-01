@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
 import Album from './src/components/Album';
+import BackgroundVideo from './src/components/BackgroundVideo';
 
 const MusicRoute = () => <Text>Music</Text>;
 
@@ -30,11 +31,14 @@ export default function App() {
   });
 
   return (
-    <BottomNavigation 
-      navigationState={{ index, routes }}
-      onIndexChange={setIndex}
-      renderScene={renderScene}
-    />
+    <>
+      <BackgroundVideo/>
+      <BottomNavigation 
+        navigationState={{ index, routes }}
+        onIndexChange={setIndex}
+        renderScene={renderScene}
+      />
+    </>
   );
 }
 
