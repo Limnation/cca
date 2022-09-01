@@ -2,6 +2,8 @@
   "expo": {
     "name": "cca",
     "slug": "cca",
+    "owner": "eduardogch",
+    "githubUrl": "https://github.com/Limnation/cca",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

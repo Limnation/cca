@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
+import Album from './src/components/Album';
 
 const MusicRoute = () => <Text>Music</Text>;
 
@@ -23,7 +24,7 @@ export default function App() {
 
   const renderScene = BottomNavigation.SceneMap({
     music: MusicRoute,
-    albums: AlbumsRoute,
+    albums: Album,
     recents: RecentsRoute,
     notifications: NotificationsRoute,
   });
