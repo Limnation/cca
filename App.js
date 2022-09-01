@@ -31,27 +31,10 @@ export default function App() {
   });
 
   return (
-    <>
-      <BackgroundVideo/>
-      <BottomNavigation 
-        navigationState={{ index, routes }}
-        onIndexChange={setIndex}
-        renderScene={renderScene}
-      />
-    </>
+    <BottomNavigation 
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={renderScene}
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#023047',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: 'white'
-  }
-});
