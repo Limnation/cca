@@ -1,23 +1,33 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import Video from "react-native-video";
 
 const video = "../../assets/heroVideoHomeH.mp4"
+const { width, height } = Dimensions.get("window");
 
 const BackgroundVideo = () => {
   return (
-    <video autoplay muted loop style={styles.video}>
-        <source src={video} type="video/mp4" />
-    </video>
+    <Video
+      source={require(video)}
+      style={styles.backgroundVideo}
+      muted={true}
+      repeat={true}
+      resizeMode={"cover"}
+      rate={1.0}
+      ignoreSilentSwitch={"obey"}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  video: {
-    position: fixed,
-    right: 0,
+  backgroundVideo: {
+    height: height,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    alignItems: "stretch",
     bottom: 0,
-    minWidth: 100,
-    minHeight: 100,
+    right: 0
   }
 });
 
