@@ -4,6 +4,7 @@ import { StyleSheet, View} from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
 import Album from './src/components/Album';
 import BackgroundVideo from './src/components/BackgroundVideo';
+import SiteInfo from './src/components/SiteInfo';
 
 const MusicRoute = () => <Text>Music</Text>;
 
@@ -19,14 +20,14 @@ export default function App() {
   const [routes] = React.useState([
     { key: 'music', title: 'Favorites', focusedIcon: 'heart', unfocusedIcon: 'heart-outline'},
     { key: 'albums', title: 'Albums', focusedIcon: 'album' },
-    { key: 'recents', title: 'Recents', focusedIcon: 'history' },
+    { key: 'recents', title: 'ATL Office', focusedIcon: 'history' },
     { key: 'notifications', title: 'Notifications', focusedIcon: 'bell', unfocusedIcon: 'bell-outline' },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
     music: MusicRoute,
     albums: Album,
-    recents: RecentsRoute,
+    recents: SiteInfo,
     notifications: NotificationsRoute,
   });
 

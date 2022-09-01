@@ -38,7 +38,7 @@ const Album = () => {
     return (
         <>
             <Text>Photo Albums</Text>
-            <PhotoAlbum layout="rows" photos={photos} />
+            {/* <PhotoAlbum layout="rows" photos={photos} /> */}
         </>
     );
 };

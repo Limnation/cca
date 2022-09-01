@@ -1,30 +1,30 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import Video from "react-native-video";
-import video from '../../assets/heroVideoHomeV.mp4';
+// import Video from "react-native-video";
 
-const BackgroundVideo = () => {
-  return (
-    <Video
-      source={video}  
-      paused={false}  
-      controls={false}  
-      style={styles.backgroundVideo}  
-      muted={false}  
-    />
-  );
-}
 
-const styles = StyleSheet.create({
-  backgroundVideo: {
-    height: height,
-    position: "absolute",
-    top: 0,
-    left: 0,
-    alignItems: "stretch",
-    bottom: 0,
-    right: 0
-  }
-});
+// const BackgroundVideo = () => {
+//   return (
+//     <Video
+//       source={video}  
+//       paused={false}  
+//       controls={false}  
+//       style={styles.backgroundVideo}  
+//       muted={false}  
+//     />
+//   );
+// }
 
-export default BackgroundVideo;
+// const styles = StyleSheet.create({
+//   backgroundVideo: {
+//     height: height,
+//     position: "absolute",
+//     top: 0,
+//     left: 0,
+//     alignItems: "stretch",
+//     bottom: 0,
+//     right: 0
+//   }
+// });
+
+// export default BackgroundVideo;
