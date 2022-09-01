@@ -19,10 +19,10 @@ const NotificationsRoute = () => <Text>Notifications</Text>;
 export default function App() {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'music', title: 'Home', focusedIcon: 'heart', unfocusedIcon: 'heart-outline'},
-    { key: 'albums', title: 'Photos', focusedIcon: 'album' },
-    { key: 'recents', title: 'Site Info', focusedIcon: 'history' },
-    { key: 'notifications', title: 'Recomendations', focusedIcon: 'bell', unfocusedIcon: 'bell-outline' },
+    { key: 'music', title: 'Home', focusedIcon: 'home'},
+    { key: 'albums', title: 'Photos', focusedIcon: 'image' },
+    { key: 'recents', title: 'Site Info', focusedIcon: 'newspaper' },
+    { key: 'notifications', title: 'Recomendations', focusedIcon: 'heart'},
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
