@@ -6,6 +6,7 @@ import Album from './src/components/Album';
 import BackgroundVideo from './src/components/BackgroundVideo';
 import SiteInfo from './src/components/SiteInfo';
 import Recomendations from './src/components/Recomendations';
+import HomePage from './src/components/HomePage';
 
 const MusicRoute = () => <Text>Music</Text>;
 
@@ -26,7 +27,7 @@ export default function App() {
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    music: MusicRoute,
+    music: HomePage,
     albums: Album,
     recents: SiteInfo,
     notifications: Recomendations,
