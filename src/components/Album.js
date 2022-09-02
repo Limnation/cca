@@ -26,7 +26,7 @@ const Album = () => {
           'https://github.com/Limnation/cca/raw/main/assets/photos/img10.png',
         ]}
       />
-      <FAB.Group
+      {/* <FAB.Group
           open={open}
           icon={open ? 'calendar-today' : 'plus'}
           actions={[
@@ -38,7 +38,7 @@ const Album = () => {
               // do something if the speed dial is open
             }
           }}
-        />
+        /> */}
     </View>
   );
 };

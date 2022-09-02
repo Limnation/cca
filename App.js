@@ -31,8 +31,8 @@ export default function App() {
         onIndexChange={setIndex}
         renderScene={renderScene}
         barStyle={{ backgroundColor: '#8ECAE6'}}
-        activeColor={theme.colors.primary}
-        inactiveColor={theme.colors.tertiary}
+        activeColor={theme.colors.tertiary}
+        inactiveColor={theme.colors.primary}
         style={{color: '#fff'}}
       />
     </PaperProvider>
