@@ -1,17 +1,31 @@
 
-import { StyleSheet, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, View, Image, ImageBackground, Text } from 'react-native';
+import AppLoading from 'expo-app-loading';
+import {
+  useFonts,
+  Modak,
+} from '@expo-google-fonts/Modak';
 
-const image = require('../../assets/pcm.jpg')
+const image = require('../../assets/backgroundPonce.jpg')
 
 const HomePage = () => {
+  let [fontsLoaded] = useFonts({
+    Modak,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
     return (
       <View style={styles.container}>
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
           <Image style={styles.header} source={require('../../assets/ccaLogo.png')} />
-          <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} />
+          <Text>Culture Club App</Text>
+          {/* <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} /> */}
         </ImageBackground>
       </View>
     )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -19,12 +33,18 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#023047',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'top',
       backgroundColor: '#023047',
     },
-      image: {
+    image: {
       flex: 1,
-      justifyContent: "center"
+      justifyContent: "top"
+    },
+    text: {
+      flex: 1,
+      color: '#FFB703',
+      fontFamily: 'Modak',
+      fontSize: 20,
     },
     header: {
       width: 325,
