@@ -3,14 +3,14 @@ import { StyleSheet, View, Image, ImageBackground, Text } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
-  Modak,
-} from '@expo-google-fonts/Modak';
+  Inter_900Black,
+} from '@expo-google-fonts/inter';
 
 const image = require('../../assets/backgroundPonce.jpg')
 
 const HomePage = () => {
   let [fontsLoaded] = useFonts({
-    Modak,
+    Inter_900Black,
   });
 
   if (!fontsLoaded) {
@@ -20,7 +20,7 @@ const HomePage = () => {
       <View style={styles.container}>
         <ImageBackground source={image} resizeMode="cover" style={styles.image}>
           <Image style={styles.header} source={require('../../assets/ccaLogo.png')} />
-          <Text>Culture Club App</Text>
+          <Text style={styles.text}>Culture Club App</Text>
           {/* <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} /> */}
         </ImageBackground>
       </View>
@@ -43,17 +43,17 @@ const styles = StyleSheet.create({
     text: {
       flex: 1,
       color: '#FFB703',
-      fontFamily: 'Modak',
+      fontFamily: 'Modak_400Regular',
       fontSize: 20,
     },
     header: {
       width: 325,
       height: 195,
     },
-    welcome: {
-      width: 315,
-      height: 50,
-    }
+    // welcome: {
+    //   width: 315,
+    //   height: 50,
+    // }
 });
 
 export default HomePage;
