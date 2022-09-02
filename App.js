@@ -30,9 +30,10 @@ export default function App() {
         navigationState={{ index, routes }}
         onIndexChange={setIndex}
         renderScene={renderScene}
-        barStyle={{ backgroundColor: '#023047', }}
-        activeColor={theme.colors.secondary}
+        barStyle={{ backgroundColor: '#8ECAE6'}}
+        activeColor={theme.colors.primary}
         inactiveColor={theme.colors.tertiary}
+        style={{color: '#fff'}}
       />
     </PaperProvider>
   );
