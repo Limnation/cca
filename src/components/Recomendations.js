@@ -4,24 +4,6 @@ import { StyleSheet, ScrollView } from 'react-native';
 const Recomendations = () => {
     return (
         <ScrollView style={styles.container}>
-    {/* <List.AccordionGroup>
-        <List.Accordion title="Eat" id="1">
-            <List.Item title="Two Urban Licks" />
-            <List.Item title="Two Urban Licks" />
-            <List.Item title="Two Urban Licks" />
-        </List.Accordion>
-        <List.Accordion title="Drink" id="2">
-            <List.Item title="Item 2" />
-            <List.Item title="Two Urban Licks" />
-            <List.Item title="Two Urban Licks" />
-            <List.Item title="Two Urban Licks" />
-        </List.Accordion>
-        <List.Accordion title="Fun" id="3">
-            <List.Item title="Item 3" />
-        </List.Accordion>
-
-  </List.AccordionGroup> */}
-
         <Card>
             <Card.Content>
                 <List.Accordion title='Eat' titleStyle={{fontSize: 24, color: '#023047'}}>
