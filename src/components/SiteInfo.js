@@ -1,6 +1,6 @@
 import { Text, Card, Title, Paragraph } from 'react-native-paper';
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 const SiteInfo = () => {
     return (
@@ -19,6 +19,12 @@ const SiteInfo = () => {
                 <Card.Cover source={{ uri: 'https://github.com/Limnation/cca/raw/main/assets/parking.png' }} />
             </Card.Content>
         </Card>
+        <Card>
+            <Card.Content>
+                <Title>Map</Title>
+                <Image style={styles.map} source={require('../../assets/map.jpg')} />
+            </Card.Content>
+        </Card>
         </View>
     );
 };
@@ -26,6 +32,9 @@ const SiteInfo = () => {
 const styles = StyleSheet.create({
     container: {
         top: 50,
+    },
+    map: {
+      width: '100%'
     }
 });
 
