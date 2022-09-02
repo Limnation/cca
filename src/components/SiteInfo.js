@@ -1,10 +1,10 @@
 import { Text, Card, Title, Paragraph } from 'react-native-paper';
 import * as React from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, ScrollView, Image } from 'react-native';
 
 const SiteInfo = () => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
         <Card>
             <Card.Content>
                 <Title>Atlanta Office</Title>
@@ -22,19 +22,24 @@ const SiteInfo = () => {
         <Card>
             <Card.Content>
                 <Title>Map</Title>
+                <Paragraph>Coffee, Food, & Drinks</Paragraph>
                 <Image style={styles.map} source={require('../../assets/map.jpg')} />
             </Card.Content>
         </Card>
-        </View>
+        </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        top: 50,
+        // top: 50,
+        flex: 1,
     },
     map: {
-      width: '100%'
+        flex: 1,
+      width: '100%',
+      height: 290,
+      resizeMode: 'contain',
     }
 });
 
