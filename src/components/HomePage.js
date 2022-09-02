@@ -1,5 +1,5 @@
 
-import { StyleSheet, View, Image, ImageBackground, Text } from 'react-native';
+import { StyleSheet, View, Image, ImageBackground, Text, Dimensions } from 'react-native';
 import AppLoading from 'expo-app-loading';
 import {
   useFonts,
@@ -7,6 +7,7 @@ import {
 } from '@expo-google-fonts/inter';
 
 const image = require('../../assets/backgroundPonce.jpg')
+const {width, height} = Dimensions.get("window")
 
 const HomePage = () => {
   let [fontsLoaded] = useFonts({
@@ -18,7 +19,7 @@ const HomePage = () => {
   } else {
     return (
       <View style={styles.container}>
-        <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <ImageBackground source={image} resizeMode='cover' style={styles.image}>
           <Image style={styles.header} source={require('../../assets/ccaLogo.png')} />
           <Text style={styles.text}>Culture Club App</Text>
           {/* <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} /> */}
@@ -38,13 +39,19 @@ const styles = StyleSheet.create({
     },
     image: {
       flex: 1,
-      justifyContent: "top"
+      justifyContent: 'top',
+      maxHeight: height,
+      maxWidth: width,
+      width: '100%', 
+      height: '100%', 
+      resizeMode: 'contain',
     },
     text: {
       flex: 1,
       color: '#FFB703',
       fontFamily: 'Modak_400Regular',
-      fontSize: 20,
+      fontSize: 35,
+      textAlign: 'center',
     },
     header: {
       width: 325,
