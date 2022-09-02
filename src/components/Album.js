@@ -1,4 +1,5 @@
-import { FAB, View, StyleSheet, Text } from 'react-native';
+import * as React from 'react';
+import { FAB, Portal, Provider, View, StyleSheet, Text } from 'react-native';
 import GridImageView from 'react-native-grid-image-viewer';
 
 const Album = () => {
