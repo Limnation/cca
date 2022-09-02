@@ -30,6 +30,9 @@ export default function App() {
         navigationState={{ index, routes }}
         onIndexChange={setIndex}
         renderScene={renderScene}
+        barStyle={{ backgroundColor: '#023047', }}
+        activeColor={theme.colors.secondary}
+        inactiveColor={theme.colors.tertiary}
       />
     </PaperProvider>
   );
@@ -41,9 +44,8 @@ const theme = {
   roundness: 2,
   version: 3,
   colors: {
-    ...DefaultTheme.colors,
     primary: '#023047',
     secondary: '#8ECAE6',
-    tertiary: '#FFB703'
-  },
+    tertiary: '#fff',
+  }
 };
