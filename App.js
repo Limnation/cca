@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
 import { BottomNavigation, Text } from 'react-native-paper';
 import Album from './src/components/Album';
-import BackgroundVideo from './src/components/BackgroundVideo';
+// import BackgroundVideo from './src/components/BackgroundVideo';
 import SiteInfo from './src/components/SiteInfo';
 import Recomendations from './src/components/Recomendations';
 import HomePage from './src/components/HomePage';
