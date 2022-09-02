@@ -21,7 +21,7 @@ const HomePage = () => {
       <View style={styles.container}>
         <ImageBackground source={image} resizeMode='cover' style={styles.image}>
           <Image style={styles.header} source={require('../../assets/ccaLogo.png')} />
-          <Text style={styles.text}>Culture Club App</Text>
+          {/* <Text style={styles.text}>Culture Club App</Text> */}
           {/* <Image style={styles.welcome} source={require('../../assets/cultureClubAppImage.png')} /> */}
         </ImageBackground>
       </View>
