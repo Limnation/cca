@@ -46,13 +46,13 @@ const styles = StyleSheet.create({
       height: '100%', 
       resizeMode: 'contain',
     },
-    text: {
-      flex: 1,
-      color: '#FFB703',
-      fontFamily: 'Modak_400Regular',
-      fontSize: 35,
-      textAlign: 'center',
-    },
+    // text: {
+    //   flex: 1,
+    //   color: '#FFB703',
+    //   fontFamily: 'Modak_400Regular',
+    //   fontSize: 35,
+    //   textAlign: 'center',
+    // },
     header: {
       width: 325,
       height: 195,
