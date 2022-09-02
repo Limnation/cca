@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { FAB, Portal, Provider, View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
+import { FAB, Portal, Provider } from 'react-native-paper';
 import GridImageView from 'react-native-grid-image-viewer';
 
 const Album = () => {
@@ -32,8 +33,19 @@ const Album = () => {
           'https://github.com/Limnation/cca/raw/main/assets/photos/img16.png',
         ]}
       />
+      <FAB
+    icon="plus"
+    style={styles.fab}
+    color='#fff'
+    size={'medium'}
+    onPress={() => console.log('Pressed')}
+  />
       {/* <FAB.Group
           open={open}
+          mode={'flat'}
+          color='#FB8500'
+          style={styles.fab}
+          size={'large'}
           icon={open ? 'calendar-today' : 'plus'}
           actions={[
             { icon: 'plus', label: 'Star', onPress: () => console.log('Pressed add') }
@@ -65,6 +77,13 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     fontSize: 12,
     fontWeight: '600',
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#FFB703'
   },
 });
 

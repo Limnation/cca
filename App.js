@@ -48,5 +48,9 @@ const theme = {
     primary: '#023047',
     secondary: '#8ECAE6',
     tertiary: '#fff',
-  }
+    elevation: {
+      level3: '9',
+    }
+  },
+  
 };
