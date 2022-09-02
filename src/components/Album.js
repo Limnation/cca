@@ -1,7 +1,11 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { FAB, View, StyleSheet, Text } from 'react-native';
 import GridImageView from 'react-native-grid-image-viewer';
 
 const Album = () => {
+  const [state, setState] = React.useState({ open: false });
+  const onStateChange = ({ open }) => setState({ open });
+  const { open } = state;
+
   return (
     <View style={styles.background}>
       <Text style={styles.headline_text}>Photo Album</Text>
@@ -21,6 +25,19 @@ const Album = () => {
           'https://github.com/Limnation/cca/raw/main/assets/photos/img10.png',
         ]}
       />
+      <FAB.Group
+          open={open}
+          icon={open ? 'calendar-today' : 'plus'}
+          actions={[
+            { icon: 'plus', label: 'Star', onPress: () => console.log('Pressed add') }
+          ]}
+          onStateChange={onStateChange}
+          onPress={() => {
+            if (open) {
+              // do something if the speed dial is open
+            }
+          }}
+        />
     </View>
   );
 };
