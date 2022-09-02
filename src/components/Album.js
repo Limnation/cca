@@ -24,6 +24,12 @@ const Album = () => {
           'https://github.com/Limnation/cca/raw/main/assets/photos/img8.png',
           'https://github.com/Limnation/cca/raw/main/assets/photos/img9.png',
           'https://github.com/Limnation/cca/raw/main/assets/photos/img10.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img11.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img12.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img13.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img14.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img15.png',
+          'https://github.com/Limnation/cca/raw/main/assets/photos/img16.png',
         ]}
       />
       {/* <FAB.Group
