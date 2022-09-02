@@ -1,21 +1,12 @@
 import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View} from 'react-native';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { BottomNavigation, Text, Provider as PaperProvider, MD3LightTheme as DefaultTheme, } from 'react-native-paper';
 import Album from './src/components/Album';
 // import BackgroundVideo from './src/components/BackgroundVideo';
 import SiteInfo from './src/components/SiteInfo';
 import Recomendations from './src/components/Recomendations';
 import HomePage from './src/components/HomePage';
-
-const MusicRoute = () => <Text>Music</Text>;
-
-const AlbumsRoute = () => <Text>Albums</Text>;
-
-const RecentsRoute = () => <Text>Recents</Text>;
-
-const NotificationsRoute = () => <Text>Notifications</Text>;
-
 
 export default function App() {
   const [index, setIndex] = React.useState(0);
@@ -23,7 +14,7 @@ export default function App() {
     { key: 'music', title: 'Home', focusedIcon: 'home'},
     { key: 'albums', title: 'Photos', focusedIcon: 'image' },
     { key: 'recents', title: 'Site Info', focusedIcon: 'newspaper' },
-    { key: 'notifications', title: 'Recomendations', focusedIcon: 'heart'},
+    { key: 'notifications', title: 'Favorites', focusedIcon: 'heart'},
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -34,10 +25,25 @@ export default function App() {
   });
 
   return (
-    <BottomNavigation 
-      navigationState={{ index, routes }}
-      onIndexChange={setIndex}
-      renderScene={renderScene}
-    />
+    <PaperProvider theme={theme}>
+      <BottomNavigation
+        navigationState={{ index, routes }}
+        onIndexChange={setIndex}
+        renderScene={renderScene}
+      />
+    </PaperProvider>
   );
 }
+
+// messing with setting this up
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  version: 3,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#023047',
+    secondary: '#8ECAE6',
+    tertiary: '#FFB703'
+  },
+};
